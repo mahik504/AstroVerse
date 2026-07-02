@@ -1,4 +1,7 @@
+import logging
 import pandas as pd
+
+logger = logging.getLogger(__name__)
 from astroquery.mast import Catalogs
 
 CRITICAL_TIC_COLUMNS = [
@@ -28,7 +31,7 @@ def fetch_tic_parameters(tic_ids: list) -> pd.DataFrame:
     Returns:
         pd.DataFrame: A dataframe containing the selected stellar properties.
     """
-    print(f"Querying MAST API for {len(tic_ids)} targets...")
+    logger.info(f"Querying MAST API for {len(tic_ids)} targets...")
     
     
     tic_ids_str = [str(tid).replace("TIC", "").strip() for tid in tic_ids]
@@ -44,7 +47,7 @@ def fetch_tic_parameters(tic_ids: list) -> pd.DataFrame:
         
         return df_filtered
     except Exception as e:
-        print(f"Error querying MAST API: {e}")
+        logger.error(f"Error querying MAST API: {e}")
         return pd.DataFrame()
 
 def preprocess_tic_features(df: pd.DataFrame) -> pd.DataFrame:

@@ -1,0 +1,5 @@
+Architecture: EvoMoE
+Parameters: 1,485,605
+Input LC: (batch, 2000)
+Input TIC: (batch, 12)
+Output: (batch, 2)

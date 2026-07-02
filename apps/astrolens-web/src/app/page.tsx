@@ -223,9 +223,9 @@ export default function AstroLensHome() {
                   This system utilizes a Mixture-of-Experts (MoE) architecture to process photometric time-series data. 
                 </p>
                 <ul className="text-xs text-zinc-500 space-y-2 font-mono">
-                  <li>&gt; <strong>CNN:</strong> Analyzes transit morphology.</li>
-                  <li>&gt; <strong>Transformer:</strong> Detects orbital periodicity.</li>
-                  <li>&gt; <strong>MLP:</strong> Enforces physical stellar constraints.</li>
+                  <li>&gt; <strong>Multi-Scale CNN Expert:</strong> Analyzes transit morphology.</li>
+                  <li>&gt; <strong>Temporal Transformer Expert:</strong> Detects orbital periodicity.</li>
+                  <li>&gt; <strong>Physics MLP Expert:</strong> Enforces physical stellar constraints.</li>
                 </ul>
               </div>
 
@@ -312,21 +312,21 @@ export default function AstroLensHome() {
                       <>
                         <div>
                           <div className="flex justify-between font-mono text-[10px] uppercase mb-1">
-                            <span className="text-zinc-400">Local Expert (CNN)</span>
+                            <span className="text-zinc-400">Multi-Scale CNN Expert</span>
                             <span className="text-white">{result.confidence_routing.CNN_Shape}%</span>
                           </div>
                           <Progress value={result.confidence_routing.CNN_Shape} className="h-1 bg-zinc-900 rounded-none" indicatorClassName="bg-white" />
                         </div>
                         <div>
                           <div className="flex justify-between font-mono text-[10px] uppercase mb-1">
-                            <span className="text-zinc-400">Global Expert (Transformer)</span>
+                            <span className="text-zinc-400">Temporal Transformer Expert</span>
                             <span className="text-white">{result.confidence_routing.Transformer_Rhythm}%</span>
                           </div>
                           <Progress value={result.confidence_routing.Transformer_Rhythm} className="h-1 bg-zinc-900 rounded-none" indicatorClassName="bg-white" />
                         </div>
                         <div>
                           <div className="flex justify-between font-mono text-[10px] uppercase mb-1">
-                            <span className="text-zinc-400">Stellar Expert (Physics MLP)</span>
+                            <span className="text-zinc-400">Physics MLP Expert</span>
                             <span className="text-white">{result.confidence_routing.Physics_MLP}%</span>
                           </div>
                           <Progress value={result.confidence_routing.Physics_MLP} className="h-1 bg-zinc-900 rounded-none" indicatorClassName="bg-white" />

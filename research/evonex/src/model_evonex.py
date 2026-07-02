@@ -129,9 +129,11 @@ class EvoMoE_Model(nn.Module):
     A Physics-Aware Confidence-Guided Multimodal Framework for
     Robust Exoplanet Transit Detection.
     """
-    def __init__(self, lc_seq_length=2000, num_tic_features=12, embed_dim=128, num_classes=2):
+    def __init__(self, lc_seq_length=2000, num_tic_features=12, embed_dim=128, num_classes=2, active_experts=None):
         super().__init__()
 
+        self.active_experts = active_experts if active_experts is not None else ["cnn", "transformer", "physics"]
+        
         self.cnn_expert = MultiScaleCNN_Expert(seq_len=lc_seq_length, embed_dim=embed_dim)
         self.transformer_expert = Transformer_Expert(seq_len=lc_seq_length, embed_dim=embed_dim)
         self.physics_expert = PhysicsMLP_Expert(num_tic_features=num_tic_features, embed_dim=embed_dim)
@@ -155,8 +157,25 @@ class EvoMoE_Model(nn.Module):
         emb_trans, conf_trans = self.transformer_expert(lc_tensor)
         emb_phys, conf_phys = self.physics_expert(tic_tensor)
 
-        confidences = torch.cat([conf_cnn, conf_trans, conf_phys], dim=1)
+        confidences_list = []
+        
+        # Mask off inactive experts
+        if "cnn" in self.active_experts:
+            confidences_list.append(conf_cnn)
+        else:
+            confidences_list.append(torch.full_like(conf_cnn, float('-inf')))
+            
+        if "transformer" in self.active_experts:
+            confidences_list.append(conf_trans)
+        else:
+            confidences_list.append(torch.full_like(conf_trans, float('-inf')))
+            
+        if "physics" in self.active_experts:
+            confidences_list.append(conf_phys)
+        else:
+            confidences_list.append(torch.full_like(conf_phys, float('-inf')))
 
+        confidences = torch.cat(confidences_list, dim=1)
         gating_weights = F.softmax(confidences, dim=1)
 
         w_cnn = gating_weights[:, 0].unsqueeze(1)

@@ -1,4 +1,7 @@
+import logging
 import os
+
+logger = logging.getLogger(__name__)
 import h5py
 import numpy as np
 import pandas as pd
@@ -19,14 +22,23 @@ class TESSDataset(Dataset):
     2. Phase-Folding: Uses BLS to fold the light curve at the detected transit period.
     3. Multimodal: Returns both 1D Light Curve tensors and 1D Stellar Metadata tensors.
     """
-    def __init__(self, tic_ids, labels=None, cache_dir="../data/cache", seq_length=2000):
+    def __init__(self, tic_ids=None, labels=None, cache_dir="../data/cache", seq_length=2000, dataset_version=None):
+        self.seq_length = seq_length
         self.tic_ids = tic_ids
         self.labels = labels
-        self.cache_dir = cache_dir
-        self.seq_length = seq_length
 
-        os.makedirs(self.cache_dir, exist_ok=True)
-        self.h5_path = os.path.join(self.cache_dir, "tess_cache.h5")
+        if dataset_version:
+            self.h5_path = os.path.join(os.path.dirname(__file__), "..", "datasets", dataset_version, "tess_cache.h5")
+            if not os.path.exists(self.h5_path):
+                raise FileNotFoundError(f"Dataset version {dataset_version} not found at {self.h5_path}")
+            
+            with h5py.File(self.h5_path, 'r') as h5f:
+                self.tic_ids = list(h5f.keys())
+                self.labels = [h5f[tic].attrs['label'] for tic in self.tic_ids]
+        else:
+            self.cache_dir = cache_dir
+            os.makedirs(self.cache_dir, exist_ok=True)
+            self.h5_path = os.path.join(self.cache_dir, "tess_cache.h5")
 
     def __len__(self):
         return len(self.tic_ids)
@@ -67,7 +79,7 @@ class TESSDataset(Dataset):
             pass
 
         # Cache miss — download from MAST
-        print(f"[{target_name}] Cache miss. Fetching from MAST API...")
+        logger.info(f"[{target_name}] Cache miss. Fetching from MAST API...")
 
         try:
             search_result = lk.search_lightcurve(target_name, author="SPOC")
@@ -75,7 +87,7 @@ class TESSDataset(Dataset):
                 raise ValueError(f"No light curve found for {target_name}")
             lc = search_result[0].download()
         except Exception as e:
-            print(f"Error downloading {target_name}: {e}")
+            logger.error(f"Error downloading {target_name}: {e}")
             lc_tensor = torch.zeros(self.seq_length, dtype=torch.float32)
             tic_tensor = torch.zeros(12, dtype=torch.float32)
             if self.labels is not None:

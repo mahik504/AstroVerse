@@ -1,0 +1,9 @@
+{
+  "git_commit": "f00e7c50c9348b534d0967085f2f04ec699ed5f8",
+  "python_version": "3.11.15 (main, Jun 23 2026, 15:20:37) [MSC v.1944 64 bit (AMD64)]",
+  "torch_version": "2.12.1+cpu",
+  "cuda_available": false,
+  "random_seed": 42,
+  "dataset_version": "v1-curated-100",
+  "model_architecture": "EvoMoE"
+}

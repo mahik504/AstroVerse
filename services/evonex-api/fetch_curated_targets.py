@@ -1,11 +1,14 @@
+import logging
 import json
+
+logger = logging.getLogger(__name__)
 import os
 import random
 from astroquery.mast import Catalogs
 import pandas as pd
 
 def fetch_curated_targets():
-    print("Initiating connection to NASA MAST API...")
+    logger.info("Initiating connection to NASA MAST API...")
     
     
     curated_tics = [
@@ -26,11 +29,7 @@ def fetch_curated_targets():
         "149603530",  # Normal Star
     ]
     
-    for i in range(85):
-        random_tic = str(random.randint(100000000, 999999999))
-        curated_tics.append(random_tic)
-
-    print(f"Fetching stellar astrophysics metadata for {len(curated_tics)} targets...")
+    logger.info(f"Fetching stellar astrophysics metadata for {len(curated_tics)} targets...")
     
     database = []
     
@@ -55,7 +54,7 @@ def fetch_curated_targets():
             database.append(target_data)
             
     except Exception as e:
-        print(f"Error communicating with MAST: {e}")
+        logger.error(f"Error communicating with MAST: {e}")
         return
 
     data_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
@@ -65,8 +64,8 @@ def fetch_curated_targets():
     with open(json_path, 'w') as f:
         json.dump(database, f, indent=4)
         
-    print(f"✅ Successfully compiled V1 Target Database with {len(database)} stars.")
-    print(f"Database saved to {json_path}")
+    logger.info(f"✅ Successfully compiled V1 Target Database with {len(database)} stars.")
+    logger.info(f"Database saved to {json_path}")
 
 if __name__ == "__main__":
     fetch_curated_targets()

@@ -1,0 +1,32 @@
+[
+  {
+    "epoch": 1,
+    "loss": NaN,
+    "time_seconds": 0.1,
+    "lr": 0.001
+  },
+  {
+    "epoch": 2,
+    "loss": NaN,
+    "time_seconds": 0.06,
+    "lr": 0.001
+  },
+  {
+    "epoch": 3,
+    "loss": NaN,
+    "time_seconds": 0.07,
+    "lr": 0.001
+  },
+  {
+    "epoch": 4,
+    "loss": NaN,
+    "time_seconds": 0.07,
+    "lr": 0.001
+  },
+  {
+    "epoch": 5,
+    "loss": NaN,
+    "time_seconds": 0.07,
+    "lr": 0.001
+  }
+]

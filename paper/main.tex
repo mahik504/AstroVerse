@@ -1,0 +1,25 @@
+\documentclass[runningheads]{llncs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{AstroVerse: Automated Discovery of Exoplanets using an Explainable Mixture-of-Experts Architecture}
+\author{Team EvoNex}
+\institute{Bharatiya Antariksh Hackathon 2026}
+\maketitle
+
+\begin{abstract}
+We present AstroVerse, a reproducible open-source scientific pipeline for automated exoplanet transit detection. The core architecture, EvoMoE, utilizes a Confidence-Guided Mixture-of-Experts (MoE) network to fuse multi-scale transit morphology, global periodicity, and stellar physics validation into a single explainable detection score.
+\end{abstract}
+
+\input{sections/01_introduction.tex}
+\input{sections/02_methods.tex}
+\input{sections/03_results.tex}
+\input{sections/04_conclusion.tex}
+
+\bibliographystyle{splncs04}
+\bibliography{references}
+
+\end{document}

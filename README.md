@@ -1,86 +1,112 @@
 # AstroVerse 🔭
 
+[![CI](https://github.com/mahik504/AstroVerse/actions/workflows/ci.yml/badge.svg)](https://github.com/mahik504/AstroVerse/actions/workflows/ci.yml)
+[![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 **AI-Powered Exoplanet Transit Detection using Mixture-of-Experts Architecture on NASA TESS Data**
 
-AstroVerse is a modular research platform for automated exoplanet detection. It combines a novel neural network architecture (**EvoMoE**) with a full-stack scientific dashboard (**AstroLens**).
+AstroVerse is an open-source, modular research platform for automated exoplanet detection. It combines a novel neural network architecture (**EvoMoE**) with a full-stack scientific dashboard (**AstroLens**).
 
 ## Architecture Overview
 
+```mermaid
+graph TD
+    A[NASA MAST API] -->|Raw Flux Data| B(Preprocessing Engine)
+    A -->|Stellar Metadata| E(Physics Context)
+    B -->|Savitzky-Golay & Sigma Clipping| C(BLS Algorithm)
+    C -->|Phase-Folded Curve| D(EvoMoE Neural Network)
+    E --> D
+    D -->|Explainable Confidence Scores| F([Exoplanet Validation])
 ```
+
+### Project Structure
+
+```text
 AstroVerse/
 ├── apps/astrolens-web/     # Next.js 16 scientific dashboard
 ├── research/evonex/        # PyTorch EvoMoE model + training pipeline
+│   ├── configs/            # YAML experiment configurations
+│   ├── experiments/        # Tracked training runs and metrics
+│   ├── src/                # Model, dataset, and preprocessing code
+│   └── tests/              # PyTest test suite
 ├── services/evonex-api/    # FastAPI inference server
-└── docs/                   # Model Card, Dataset Card
+└── docs/                   # Documentation (Architecture, API, Reproducibility)
 ```
 
-### EvoMoE (Evolutionary Mixture of Experts)
-
-EvoMoE routes exoplanet classification decisions across three specialized expert networks:
-
-| Expert | Architecture | Purpose |
-|---|---|---|
-| **Local Expert** | Multi-Scale CNN (k=5, 11, 21) | Transit dip morphology |
-| **Global Expert** | Transformer + Positional Encoding | Orbital periodicity |
-| **Stellar Expert** | Physics-Aware MLP | Stellar parameter validation |
-
-A **Confidence-Guided Gating Network** dynamically weights each expert's contribution using softmax-normalized confidence scores, providing inherent explainability.
-
-### AstroLens (Frontend)
-
-A Next.js dashboard that accepts light curve CSV uploads, sends them to the EvoMoE API, and visualizes:
-- Time-series flux analysis with transit zone highlighting
-- Expert routing matrix (CNN/Transformer/Physics contribution %)
-- Downloadable transit analysis reports
-
 ## Quick Start
+
+We provide a `Makefile` for streamlined developer ergonomics.
 
 ### Prerequisites
 - Python 3.11+
 - Node.js 18+
 
-### Backend
+### Installation
 ```bash
-cd services/evonex-api
-python -m venv venv
-.\venv\Scripts\Activate.ps1      # Windows
-pip install fastapi uvicorn torch pandas python-multipart
-python -m uvicorn main:app --reload
+make install
 ```
 
-### Frontend
+### Testing
+Run the model, preprocessing, and API test suites:
 ```bash
-cd apps/astrolens-web
-npm install
-npm run dev
+make test
+```
+Smoke test the model architecture:
+```bash
+make smoke
 ```
 
+### Running the Platform
+Start the FastAPI backend:
+```bash
+make dev-api
+```
+Start the Next.js frontend (in a separate terminal):
+```bash
+make dev-web
+```
 Open [http://localhost:3000](http://localhost:3000)
 
-### Research Pipeline
+## Research Workflow
+
+To train the EvoMoE model using our tracked experiment pipeline:
+
 ```bash
 cd research/evonex
-pip install -r requirements.txt
-python src/model_evonex.py        # Architecture validation
-python src/evaluate_evomoe.py     # Run evaluation
+# Train with the small config (quick test)
+python src/train_evomoe.py --config configs/small.yaml
+
+# Train with the full paper config
+python src/train_evomoe.py --config configs/paper.yaml
 ```
-
-## Data Sources
-- **TESS Light Curves:** NASA MAST Archive via `lightkurve`
-- **Stellar Parameters:** TESS Input Catalog (TIC v8.1)
-- **Target List:** STScI Exoplanet Candidate Target List (xCTL v08.01)
-
-## Project Status
-- ✅ EvoMoE architecture implemented and validated
-- ✅ HDF5-cached data pipeline with BLS phase-folding
-- ✅ Full-stack AstroLens dashboard
-- ✅ FastAPI inference server
-- 🔄 Large-scale training on NASA TOI catalog (in progress)
+Check `research/evonex/experiments/` for logged metrics, configs, and model weights.
 
 ## Documentation
-- [Model Card](docs/Model_Card.md) — Architecture details and limitations
-- [Dataset Card](docs/Dataset_Card.md) — Data sources and processing
-- [Research Paper](research/evonex/docs/Research_Paper.md) — Technical paper
+
+For a deep dive into the scientific and engineering principles of AstroVerse, see our documentation:
+
+- **[Architecture](docs/ARCHITECTURE.md)** — EvoMoE math, expert routing, and data flow.
+- **[API Reference](docs/API.md)** — FastAPI endpoints and usage.
+- **[Reproducibility](docs/REPRODUCIBILITY.md)** — How to recreate our experiments.
+- **[Research Status](docs/RESEARCH_STATUS.md)** — Current capabilities and limitations.
+- **[Model Card](docs/Model_Card.md)** / **[Dataset Card](docs/Dataset_Card.md)** — Details on EvoMoE and the STScI xCTL.
+
+## Contributing
+We welcome contributions! Please see [CONTRIBUTING.md](docs/CONTRIBUTING.md) for our code style (ruff, ESLint), PR templates, and testing requirements.
+
+## Citation
+
+If you use AstroVerse or EvoMoE in your research, please cite:
+
+```bibtex
+@software{AstroVerse2026,
+  author = {Mahi K},
+  title = {AstroVerse: Adaptive Mixture-of-Experts for Exoplanet Detection},
+  year = {2026},
+  url = {https://github.com/mahik504/AstroVerse}
+}
+```
 
 ## License
 This project is licensed under the MIT License. See [LICENSE](LICENSE).
@@ -88,4 +114,3 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE).
 ## Acknowledgments
 - NASA TESS mission and the MAST archive
 - STScI for the TIC and CTL catalogs
-- ISRO BAH 2026 for the problem statement
