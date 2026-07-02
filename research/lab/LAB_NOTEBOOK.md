@@ -15,9 +15,9 @@
 **Random Seed**: 42, 43, 44
 **Hardware**: CPU
 **Expected Result**: ResNet AUPRC > 0.85, ResNet ECE > 0.15.
-**Observed Result**: *[To be filled after execution]*
-**Statistical Analysis**: *[To be filled after execution]*
-**Conclusion**: *[To be filled after execution]*
-**Next Action**: Evaluate EvoMoE on the same dataset.
+**Observed Result**: Dataset generation failed to yield a statistically significant sample size. Of 540 attempted targets, only 6 were successfully downloaded and saved to the HDF5 cache (5 positives, 1 negative).
+**Statistical Analysis**: N/A (Insufficient N).
+**Conclusion**: The MAST API ingestion pipeline is fragile. It is likely hitting rate limits, timeouts, or the targets in `toi_catalog.csv` do not have SPOC lightcurves available. Running ML baselines on $N=6$ is methodologically invalid.
+**Next Action**: Debug `build_dataset.py` and `tic_fetcher.py`. We must implement robust retry logic, error logging, and asynchronous downloading before re-attempting `v2-curated-500`.
 
 ---

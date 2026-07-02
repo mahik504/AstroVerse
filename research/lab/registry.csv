@@ -1,4 +1,4 @@
 ID,Dataset,Model,Seed,AUPRC,ECE,Status
-EXP-001,v2-curated-500,Baselines,42,Pending,Pending,Pre-registered
+EXP-001,v2-curated-500,Baselines,42,N/A,N/A,Failed
 EXP-002,v2-curated-500,EvoMoE,42,Pending,Pending,Planned
 EXP-003,v3-curated-2000,EvoMoE_CrossVal,ALL,Pending,Pending,Planned
