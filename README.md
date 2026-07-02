@@ -51,18 +51,7 @@ See our [ROADMAP.md](docs/ROADMAP.md) for detailed progress.
 ---
 
 ## 📊 Empirical Benchmarks
-
-The following baseline metrics were generated on the `v1-curated-100` evaluation subset (averaged over 3 random seeds).
-
-| Model | F1 Score | AUPRC | ECE | Latency (ms) |
-|---|---|---|---|---|
-| Classical BLS SNR | 0.909 | 0.966 | 0.157 | N/A |
-| 1D CNN | 0.909 | 0.810 | 0.089 | 2.47 |
-| 1D ResNet | 0.909 | 0.940 | 0.178 | N/A |
-| TS Transformer | 0.909 | 0.815 | 0.066 | 1.67 |
-| **EvoMoE (Ours)** | *Evaluating* | *Evaluating* | *Evaluating* | **2.44** |
-
-*(Note: EvoMoE results are currently pending the full `v4-paper-10000` distributed training run).*
+*(AstroVerse is currently in the empirical benchmarking phase. Baseline evaluations against Classical BLS, 1D CNN, ResNet, and Transformers on the `v2-curated-500` dataset are actively running. Real metrics will be published here upon completion. EvoMoE full results will follow the `v4-paper-10000` distributed training run.)*
 
 ---
 
