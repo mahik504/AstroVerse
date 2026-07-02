@@ -1,0 +1,23 @@
+model:
+  num_classes: 2
+  embed_dim: 128
+  lc_seq_length: 2000
+  num_tic_features: 12
+
+training:
+  epochs: 50
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.0
+  grad_clip: 1.0
+  scheduler: null
+  seed: 42
+
+data:
+  version: "v1-curated-100"
+  min_period: 0.5
+  max_period: 20.0
+
+output:
+  weights_dir: "../weights"
+  experiment_dir: "../experiments"
