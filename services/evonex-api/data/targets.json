@@ -1,0 +1,792 @@
+[
+    {
+        "tic_id": "142029920",
+        "tmag": 15.0353,
+        "temperature": 5809.0,
+        "mass": 1.04,
+        "radius": 1.01055,
+        "distance_pc": 1131.35,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "38846515",
+        "tmag": 10.3157,
+        "temperature": 6733.0,
+        "mass": 1.44,
+        "radius": 1.77457,
+        "distance_pc": 364.411,
+        "status": "CONFIRMED_PLANET",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "503027985",
+        "tmag": 19.4527,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 1002.46,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "844622375",
+        "tmag": 18.2937,
+        "temperature": 5746.0,
+        "mass": 1.03,
+        "radius": 0.580386,
+        "distance_pc": 3163.63,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "307210844",
+        "tmag": 17.0877,
+        "temperature": 5017.0,
+        "mass": 0.83,
+        "radius": 1.24711,
+        "distance_pc": 3212.84,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "110786806",
+        "tmag": 15.9339,
+        "temperature": 3847.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 1754.42,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "649552070",
+        "tmag": 20.8849,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 100.0,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "25155310",
+        "tmag": 10.6103,
+        "temperature": 5675.54,
+        "mass": 1.01,
+        "radius": 1.24175,
+        "distance_pc": 216.526,
+        "status": "CONFIRMED_PLANET",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "446849725",
+        "tmag": 15.2221,
+        "temperature": 4731.0,
+        "mass": 1.0,
+        "radius": 7.21325,
+        "distance_pc": 5860.51,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "750007563",
+        "tmag": 18.9601,
+        "temperature": 4775.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 1503.95,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "425933644",
+        "tmag": 11.3983,
+        "temperature": 3264.0,
+        "mass": 0.504473,
+        "radius": 0.506531,
+        "distance_pc": 44.2636,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "270810587",
+        "tmag": 16.9345,
+        "temperature": 4200.0,
+        "mass": 0.66,
+        "radius": 0.819992,
+        "distance_pc": 1376.91,
+        "status": "CONFIRMED_PLANET",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "847688656",
+        "tmag": 18.2682,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 6647.74,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "640302835",
+        "tmag": 18.752,
+        "temperature": 5557.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 1385.85,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "108083909",
+        "tmag": 18.066,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 100.0,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "196790078",
+        "tmag": 15.108,
+        "temperature": 3516.0,
+        "mass": 0.40561,
+        "radius": 0.412582,
+        "distance_pc": 210.658,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "363178663",
+        "tmag": 16.187,
+        "temperature": 5796.0,
+        "mass": 1.04,
+        "radius": 0.829235,
+        "distance_pc": 1909.38,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "253525709",
+        "tmag": 17.2643,
+        "temperature": 5051.0,
+        "mass": 1.0,
+        "radius": 2.22632,
+        "distance_pc": 4564.57,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "136120295",
+        "tmag": 16.8114,
+        "temperature": 4994.0,
+        "mass": 0.83,
+        "radius": 1.23119,
+        "distance_pc": 2430.61,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "850605259",
+        "tmag": 19.1316,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 4652.1,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "428371674",
+        "tmag": 15.3383,
+        "temperature": 9398.0,
+        "mass": 2.39,
+        "radius": 2.45729,
+        "distance_pc": 3971.54,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "353206742",
+        "tmag": 16.408,
+        "temperature": 5393.0,
+        "mass": 0.94,
+        "radius": 1.08369,
+        "distance_pc": 1951.05,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "935252618",
+        "tmag": 19.0177,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 2905.27,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "92352620",
+        "tmag": 9.6433,
+        "temperature": 6072.6,
+        "mass": 1.14,
+        "radius": 1.71036,
+        "distance_pc": 211.211,
+        "status": "CONFIRMED_PLANET",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "620547529",
+        "tmag": 19.228,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 100.0,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "149603524",
+        "tmag": 9.7109,
+        "temperature": 6391.0,
+        "mass": 1.28,
+        "radius": 1.21427,
+        "distance_pc": 175.631,
+        "status": "CONFIRMED_PLANET",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "685731817",
+        "tmag": 19.6179,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 100.0,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "963489067",
+        "tmag": 18.1057,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 100.0,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "373872041",
+        "tmag": 15.7573,
+        "temperature": 6070.0,
+        "mass": 1.13,
+        "radius": 1.78171,
+        "distance_pc": 2796.43,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "776600167",
+        "tmag": 20.3892,
+        "temperature": 5413.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 3051.98,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "201918246",
+        "tmag": 16.267,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 100.0,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "737435650",
+        "tmag": 18.7647,
+        "temperature": 3962.0,
+        "mass": 0.62,
+        "radius": 0.54549,
+        "distance_pc": 1730.66,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "149603530",
+        "tmag": 17.0651,
+        "temperature": 4710.0,
+        "mass": 1.0,
+        "radius": 1.61825,
+        "distance_pc": 3816.87,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "993485334",
+        "tmag": 19.7148,
+        "temperature": 5635.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 2413.62,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "439173695",
+        "tmag": 12.7253,
+        "temperature": 5668.0,
+        "mass": 1.0,
+        "radius": 10.5125,
+        "distance_pc": 2580.49,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "822696251",
+        "tmag": 19.3728,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 1741.54,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "150889998",
+        "tmag": 12.2886,
+        "temperature": 7341.0,
+        "mass": 1.67,
+        "radius": 1.28208,
+        "distance_pc": 536.551,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "660651484",
+        "tmag": 19.5367,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 2018.79,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "281541555",
+        "tmag": 13.0417,
+        "temperature": 5483.0,
+        "mass": 0.96,
+        "radius": 0.877585,
+        "distance_pc": 453.808,
+        "status": "ECLIPSING_BINARY",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "707418253",
+        "tmag": 19.0611,
+        "temperature": 5167.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 1803.69,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "122124726",
+        "tmag": 18.1622,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 100.0,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "630092693",
+        "tmag": 17.9324,
+        "temperature": 5511.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 2431.63,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "138462981",
+        "tmag": 17.0557,
+        "temperature": 4708.0,
+        "mass": 0.75,
+        "radius": 0.990678,
+        "distance_pc": 1747.88,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "997519484",
+        "tmag": 19.6666,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 1296.96,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "141914082",
+        "tmag": 8.5581,
+        "temperature": 4260.0,
+        "mass": 0.67,
+        "radius": 1.0451,
+        "distance_pc": 39.2181,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "261136679",
+        "tmag": 5.1054,
+        "temperature": 5992.1,
+        "mass": 1.1,
+        "radius": 1.14889,
+        "distance_pc": 18.2702,
+        "status": "CONFIRMED_PLANET",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "900236609",
+        "tmag": 20.0618,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 880.584,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "937407408",
+        "tmag": 18.7391,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 1527.17,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "168747271",
+        "tmag": 16.9614,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 100.0,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "425937691",
+        "tmag": 13.1772,
+        "temperature": 2877.0,
+        "mass": 0.302522,
+        "radius": 0.322573,
+        "distance_pc": 100.0,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "201205369",
+        "tmag": 17.925,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 100.0,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "927477358",
+        "tmag": 17.5857,
+        "temperature": 5709.0,
+        "mass": 1.02,
+        "radius": 0.743309,
+        "distance_pc": 2403.54,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "439216341",
+        "tmag": 17.5149,
+        "temperature": 5304.0,
+        "mass": 0.91,
+        "radius": 0.913585,
+        "distance_pc": 3063.03,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "316009275",
+        "tmag": 20.0455,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 100.0,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "307210830",
+        "tmag": 9.41242,
+        "temperature": 3429.0,
+        "mass": 0.292836,
+        "radius": 0.31416,
+        "distance_pc": 10.6194,
+        "status": "CONFIRMED_PLANET",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "308984513",
+        "tmag": 15.4876,
+        "temperature": 5712.0,
+        "mass": 1.02,
+        "radius": 1.50742,
+        "distance_pc": 2493.43,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "616047748",
+        "tmag": 18.1291,
+        "temperature": 6113.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 3021.04,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "679499161",
+        "tmag": 20.3435,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 1067.92,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "453622648",
+        "tmag": 16.4973,
+        "temperature": 5806.0,
+        "mass": 1.04,
+        "radius": 1.33886,
+        "distance_pc": 3405.33,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "831177610",
+        "tmag": 19.4553,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 1626.45,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "936036521",
+        "tmag": 18.8185,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 817.541,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "800039354",
+        "tmag": 19.5028,
+        "temperature": 3751.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 991.73,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "713030368",
+        "tmag": 19.6948,
+        "temperature": 4100.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 1601.14,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "373494914",
+        "tmag": 15.4867,
+        "temperature": 5648.0,
+        "mass": 1.0,
+        "radius": 1.23502,
+        "distance_pc": 1588.42,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "607701710",
+        "tmag": 19.9768,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 2806.42,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "270291995",
+        "tmag": 13.3046,
+        "temperature": 8734.0,
+        "mass": 2.19,
+        "radius": 2.6666,
+        "distance_pc": 2551.31,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "220056775",
+        "tmag": 16.2191,
+        "temperature": 6141.0,
+        "mass": 1.16,
+        "radius": 1.54907,
+        "distance_pc": 3792.68,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "954145726",
+        "tmag": 18.9224,
+        "temperature": 3645.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 507.26,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "294580671",
+        "tmag": 17.4361,
+        "temperature": 5369.0,
+        "mass": 0.93,
+        "radius": 1.5662,
+        "distance_pc": 5378.35,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "265293807",
+        "tmag": 13.9169,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 100.0,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "980014486",
+        "tmag": 19.8652,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 100.0,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "156213481",
+        "tmag": 17.9079,
+        "temperature": 3762.0,
+        "mass": 0.57,
+        "radius": 0.511662,
+        "distance_pc": 980.248,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "938201000",
+        "tmag": 19.2561,
+        "temperature": 3818.0,
+        "mass": 0.58,
+        "radius": 0.857019,
+        "distance_pc": 2825.73,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "111124868",
+        "tmag": 17.7346,
+        "temperature": 3597.0,
+        "mass": 1.0,
+        "radius": 1.3338,
+        "distance_pc": 2209.89,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "124664639",
+        "tmag": 12.4318,
+        "temperature": 6854.0,
+        "mass": 1.48,
+        "radius": 1.50462,
+        "distance_pc": 606.486,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "391073441",
+        "tmag": 14.4041,
+        "temperature": 4802.0,
+        "mass": 1.0,
+        "radius": 11.8692,
+        "distance_pc": 6142.78,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "272216331",
+        "tmag": 12.8092,
+        "temperature": 6318.0,
+        "mass": 1.24,
+        "radius": 1.17998,
+        "distance_pc": 656.927,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "673199293",
+        "tmag": 19.1024,
+        "temperature": 4552.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 1286.03,
+        "status": "UNCLASSIFIED",
+        "last_observed": "Sector 27"
+    },
+    {
+        "tic_id": "164726113",
+        "tmag": 17.118,
+        "temperature": 5500.0,
+        "mass": 1.0,
+        "radius": 1.0,
+        "distance_pc": 100.0,
+        "status": "CONFIRMED_PLANET",
+        "last_observed": "Sector 27"
+    }
+]
