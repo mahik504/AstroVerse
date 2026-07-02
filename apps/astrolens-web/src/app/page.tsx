@@ -1,21 +1,48 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import { Upload, Activity, Database, FileText, Satellite, Info, CheckCircle2, AlertTriangle } from 'lucide-react';
+import { Upload, Activity, Database, FileText, Satellite, Info, CheckCircle2, AlertTriangle, Loader2 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, ReferenceArea } from 'recharts';
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+
+interface ConfidenceRouting {
+  CNN_Shape: number;
+  Transformer_Rhythm: number;
+  Physics_MLP: number;
+}
+
+interface PredictResult {
+  is_exoplanet: boolean;
+  probability: number;
+  confidence_routing: ConfidenceRouting;
+}
+
+interface Target {
+  tic_id: string;
+  temperature: number;
+  mass: number;
+  radius?: number;
+  distance_pc: number;
+}
+
+interface LightcurvePoint {
+  phase: number;
+  flux: number;
+}
+
 export default function AstroLensHome() {
   const [activeTab, setActiveTab] = useState('workspace');
   const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [result, setResult] = useState<any>(null);
-  const [targets, setTargets] = useState<any[]>([]);
-  const [lightcurveData, setLightcurveData] = useState<any[]>([]);
+  const [result, setResult] = useState<PredictResult | null>(null);
+  const [targets, setTargets] = useState<Target[]>([]);
+  const [lightcurveData, setLightcurveData] = useState<LightcurvePoint[]>([]);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
   useEffect(() => {
-    fetch('http://localhost:8000/targets')
+    fetch(`${API_URL}/targets`)
       .then(res => res.json())
       .then(data => setTargets(data))
       .catch(err => console.error("API Error", err));
@@ -36,7 +63,7 @@ export default function AstroLensHome() {
     formData.append('file', selectedFile);
     
     try {
-      const response = await fetch('http://localhost:8000/predict', {
+      const response = await fetch(`${API_URL}/predict`, {
         method: 'POST',
         body: formData
       });
@@ -44,7 +71,7 @@ export default function AstroLensHome() {
       const data = await response.json();
       setResult(data);
       
-      const lcRes = await fetch('http://localhost:8000/lightcurve/DEMO');
+      const lcRes = await fetch(`${API_URL}/lightcurve/DEMO`);
       const lcData = await lcRes.json();
       
       const chartData = lcData.phase.map((p: number, i: number) => ({
@@ -68,18 +95,19 @@ export default function AstroLensHome() {
     formData.append('probability', result.probability.toString());
     
     try {
-      const response = await fetch('http://localhost:8000/report', {
+      const response = await fetch(`${API_URL}/report`, {
         method: 'POST',
         body: formData
       });
       const data = await response.json();
       
       const blob = new Blob([data.markdown_content], { type: 'text/markdown' });
-      const url = URL.createObjectURL(blob);
+      const blobUrl = URL.createObjectURL(blob);
       const a = document.createElement('a');
-      a.href = url;
+      a.href = blobUrl;
       a.download = `Analysis_${selectedFile?.name}.md`;
       a.click();
+      URL.revokeObjectURL(blobUrl);
     } catch (e) {
       console.error(e);
     }
@@ -122,7 +150,7 @@ export default function AstroLensHome() {
           <div className="space-y-4 animate-in fade-in duration-300">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-bold tracking-tight">STScI Exoplanet Candidate Target List (xCTL v08.01)</h2>
-              <span className="text-xs font-mono bg-zinc-900 px-2 py-1 border border-zinc-800">100 Records Active</span>
+              <span className="text-xs font-mono bg-zinc-900 px-2 py-1 border border-zinc-800">{targets.length} Records Active</span>
             </div>
             <Card className="bg-black border-zinc-800 rounded-none">
               <CardContent className="p-0">
@@ -139,8 +167,8 @@ export default function AstroLensHome() {
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-zinc-900">
-                      {targets.map((target, idx) => (
-                        <tr key={idx} className="hover:bg-zinc-900/30 transition-colors">
+                      {targets.map((target) => (
+                        <tr key={target.tic_id} className="hover:bg-zinc-900/30 transition-colors">
                           <td className="px-6 py-3 text-blue-400">{target.tic_id}</td>
                           <td className="px-6 py-3 text-zinc-300">{target.temperature}</td>
                           <td className="px-6 py-3 text-zinc-300">{target.mass}</td>

@@ -5,3 +5,10 @@ __pycache__/
 *.pth
 *.h5
 *.csv.gz
+*.pyc
+.env
+.env.local
+*.egg-info/
+dist/
+build/
+*.log
