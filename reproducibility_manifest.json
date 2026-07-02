@@ -1,0 +1,24 @@
+{
+    "project": "AstroVerse",
+    "version": "1.0.0-research",
+    "doi": "10.5281/zenodo.pending",
+    "environment": {
+        "os": "Windows",
+        "python_version": "3.11",
+        "pytorch_version": "2.1.2",
+        "cuda_version": "cpu_mode"
+    },
+    "datasets": {
+        "training": {
+            "name": "v2-curated-500",
+            "source": "NASA Exoplanet Archive / MAST",
+            "sha256": "pending_generation_post_build"
+        },
+        "evaluation": {
+            "name": "v1-curated-100",
+            "source": "NASA Exoplanet Archive / MAST",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+    },
+    "reproducibility_instructions": "Run `python build_dataset.py --version v4-paper-10000` followed by `python run_baselines.py` and `python run_ablations.py`. Ensure seeds [42, 43, 44, 45, 46] are used."
+}

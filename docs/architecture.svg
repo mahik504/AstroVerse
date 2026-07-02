@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="100%" height="100%">
+  <!-- Definitions for gradients and shadows -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+    <linearGradient id="highlightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="400" fill="url(#bgGrad)" rx="16" />
+
+  <!-- Connecting Lines -->
+  <path d="M 120 200 L 220 200" stroke="#94a3b8" stroke-width="3" fill="none" marker-end="url(#arrow)" stroke-dasharray="5,5"/>
+  <path d="M 320 200 L 420 200" stroke="#94a3b8" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  
+  <path d="M 520 200 L 620 200" stroke="#8b5cf6" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  
+  <path d="M 720 200 L 820 200" stroke="#94a3b8" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  
+  <path d="M 870 250 L 870 290" stroke="#94a3b8" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Markers -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- Node 1: TESS -->
+  <g transform="translate(20, 160)" filter="url(#shadow)">
+    <rect width="100" height="80" rx="8" fill="url(#boxGrad)" stroke="#64748b" stroke-width="2"/>
+    <text x="50" y="35" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="14" text-anchor="middle">NASA TESS</text>
+    <text x="50" y="55" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">MAST Archive</text>
+  </g>
+
+  <!-- Node 2: Dataset -->
+  <g transform="translate(220, 160)" filter="url(#shadow)">
+    <rect width="100" height="80" rx="8" fill="url(#boxGrad)" stroke="#64748b" stroke-width="2"/>
+    <text x="50" y="35" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="14" text-anchor="middle">Dataset</text>
+    <text x="50" y="55" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">TOI Curated</text>
+  </g>
+
+  <!-- Node 3: EvoMoE (Highlighted) -->
+  <g transform="translate(420, 140)" filter="url(#shadow)">
+    <rect width="100" height="120" rx="12" fill="url(#highlightGrad)" stroke="#c4b5fd" stroke-width="2"/>
+    <text x="50" y="35" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="16" text-anchor="middle">EvoMoE</text>
+    <text x="50" y="55" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">Multi-Scale CNN</text>
+    <text x="50" y="70" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">TS Transformer</text>
+    <text x="50" y="85" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">Physics MLP</text>
+    <text x="50" y="105" fill="#fde047" font-family="sans-serif" font-weight="bold" font-size="10" text-anchor="middle">Confidence Gating</text>
+  </g>
+
+  <!-- Node 4: Inference -->
+  <g transform="translate(620, 160)" filter="url(#shadow)">
+    <rect width="100" height="80" rx="8" fill="url(#boxGrad)" stroke="#64748b" stroke-width="2"/>
+    <text x="50" y="35" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="14" text-anchor="middle">Inference</text>
+    <text x="50" y="55" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">FastAPI Engine</text>
+  </g>
+
+  <!-- Node 5: Dashboard -->
+  <g transform="translate(820, 160)" filter="url(#shadow)">
+    <rect width="100" height="80" rx="8" fill="url(#boxGrad)" stroke="#64748b" stroke-width="2"/>
+    <text x="50" y="35" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="14" text-anchor="middle">AstroLens</text>
+    <text x="50" y="55" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Next.js UI</text>
+  </g>
+  
+  <!-- Node 6: Publication -->
+  <g transform="translate(820, 290)" filter="url(#shadow)">
+    <rect width="100" height="60" rx="8" fill="url(#boxGrad)" stroke="#64748b" stroke-width="2"/>
+    <text x="50" y="25" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="14" text-anchor="middle">Publication</text>
+    <text x="50" y="45" fill="#cbd5e1" font-family="sans-serif" font-size="11" text-anchor="middle">Paper / Metrics</text>
+  </g>
+
+  <!-- Title -->
+  <text x="500" y="50" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="24" text-anchor="middle">AstroVerse Scientific Pipeline</text>
+  <text x="500" y="75" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="middle">End-to-end framework for reproducible exoplanet detection</text>
+
+</svg>

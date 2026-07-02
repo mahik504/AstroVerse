@@ -1,0 +1,12 @@
+\section{Methods}
+\subsection{Data Engineering Pipeline}
+We utilize the NASA MAST API to directly query TESS light curves. The data undergoes normalization, Savitzky-Golay detrending, and sigma-clipping. We detect the primary transit signal using the Box Least Squares (BLS) algorithm and phase-fold the flux.
+
+\subsection{EvoMoE Architecture}
+The EvoMoE architecture consists of three specialized experts:
+\begin{itemize}
+    \item \textbf{Multi-Scale CNN Expert}: Analyzes phase-folded flux morphology.
+    \item \textbf{Temporal Transformer Expert}: Evaluates global periodicity.
+    \item \textbf{Physics MLP Expert}: Validates the candidate against TIC metadata (e.g., stellar mass, radius).
+\end{itemize}
+These experts are fused via Confidence-Guided Gating.
