@@ -1,0 +1,11 @@
+[
+  {
+    "id": "experiment_002",
+    "date": "2026-07-02 22:41",
+    "config": "C:\\projects\\AstroVerse\\research\\evonex\\src\\..\\configs/small.yaml",
+    "dataset": "v1-curated-100",
+    "final_loss": NaN,
+    "epochs": 5,
+    "status": "completed"
+  }
+]
