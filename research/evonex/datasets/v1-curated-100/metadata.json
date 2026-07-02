@@ -1,0 +1,15 @@
+{
+    "dataset_version": "v1-curated-100",
+    "creation_date": "2026-07-02T17:11:01.061518Z",
+    "source": "NASA MAST API (lightkurve)",
+    "total_targets_attempted": 12,
+    "total_targets_saved": 6,
+    "positives": 5,
+    "negatives": 1,
+    "filtering_rules": [
+        "Requires SPOC author",
+        "Must pass NaNs check post-preprocessing",
+        "Minimum 500 valid observation points"
+    ],
+    "random_seed": 42
+}
