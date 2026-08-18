@@ -1,12 +1,20 @@
-# AstroVerse 🔭
+# AstroVerse
 
 [![CI](https://github.com/mahik504/AstroVerse/actions/workflows/ci.yml/badge.svg)](https://github.com/mahik504/AstroVerse/actions/workflows/ci.yml)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**AstroVerse is an open-source, reproducible exoplanet detection pipeline powered by an explainable Mixture-of-Experts (EvoMoE) neural architecture.**
+Open-source exoplanet transit detection pipeline: explainable Mixture-of-Experts (EvoMoE) model, FastAPI inference, AstroLens Next.js dashboard. Built for BAH 2026. Benchmark numbers ship only after the dataset gate passes — see `docs/DECISION_LOG.md`.
 
-The core problem in automated transit detection is that deep learning models operate as "black boxes"—astrophysicists cannot trust a model if it cannot explain *why* it flagged a signal. AstroVerse introduces **EvoMoE**, which explicitly routes TESS light curves between morphological (CNN), temporal (Transformer), and physical (MLP) experts, predicting if a signal is a planet while explaining its exact reasoning.
+## Current Research Status: v1.0.0-beta
+
+- **Engineering Phase:** Complete (v1.0.0-beta)
+- **Pipeline Validation:** Complete
+- **Dataset Construction:** In Progress
+- **Baseline Benchmarking:** Pending
+- **Large-scale Evaluation:** Pending
+
+> **Note on Scientific Integrity:** This repository intentionally avoids publishing unsupported empirical metrics. Results will be released only after experiments have been completed, verified across multiple seeds, and fully reproduced. See `docs/DECISION_LOG.md` for our research methodology.
 
 ---
 
@@ -22,16 +30,20 @@ The core problem in automated transit detection is that deep learning models ope
 
 ## ⚡ Quick Start
 
-You don't need a GPU to evaluate AstroVerse. We provide a streamlined `Makefile` that downloads real NASA TESS data, runs the empirical baselines, and launches the dashboard.
-
 ```bash
-# 1. Install Dependencies
-make install
+git clone https://github.com/mahik504/AstroVerse.git
+cd AstroVerse
 
-# 2. Run the end-to-end dataset generation and baseline evaluation
-make demo
+# 1. Pipeline Validation
+make validate-pipeline
 
-# 3. Launch the API and Next.js Dashboard
+# 2. Dataset Generation (Local Cache)
+make build-dataset VERSION=v2-curated-500
+
+# 3. Scientific Benchmark (Requires Benchmark Gate to pass)
+make benchmark
+
+# 4. Launch the API and Next.js Dashboard
 make dashboard
 ```
 Open [http://localhost:3000](http://localhost:3000) to view the detection mission control.
