@@ -4,7 +4,7 @@ All notable changes to the AstroVerse project are documented here.
 
 ---
 
-## V4 — July 2026
+## v1.0.0-beta — July 2026
 
 **Research-grade transformation.**
 
@@ -17,7 +17,7 @@ All notable changes to the AstroVerse project are documented here.
 
 ---
 
-## V3 — July 2026
+## v0.3.0 — July 2026
 
 **Honesty and correctness pass.**
 
@@ -30,7 +30,7 @@ All notable changes to the AstroVerse project are documented here.
 
 ---
 
-## V2 — June 2026
+## v0.2.0 — June 2026
 
 **Repository cleanup.**
 
@@ -41,7 +41,7 @@ All notable changes to the AstroVerse project are documented here.
 
 ---
 
-## V1 — June 2026
+## v0.1.0 — June 2026
 
 **Initial prototype.**
 

@@ -1,42 +1,11 @@
-# Experiments Directory
+# AstroVerse Experiment Registry
 
-Each training run creates a numbered subdirectory:
+This dashboard serves as a public, immutable ledger of all empirical experiments conducted in this repository. Transparency is our highest priority—failed experiments and negative results are documented just as thoroughly as successes.
 
-```
-experiments/
-├── experiment_001/
-│   ├── config.yaml       # Frozen copy of training config
-│   ├── metrics.json       # Epoch-by-epoch metrics
-│   ├── metrics.csv        # Same metrics in CSV format
-│   ├── model_summary.txt  # Architecture + parameter count
-│   └── README.md          # Run notes
-├── experiment_002/
-│   └── ...
-└── index.json             # Registry of all experiments
-```
+| Experiment ID | Dataset Version | Seed | Git Commit | Result (Primary Metric) | Status | Artifacts | Notes |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **EXP-000** | `v2-curated-500` | 42 | `pending` | `pending` | 🟡 Scheduled | [Logs](../logs) | Awaiting baseline execution (v1.2.0) |
+| | | | | | | | |
+| | | | | | | | |
 
-## Experiment Registry
-
-The `index.json` file tracks all runs:
-
-```json
-[
-  {
-    "id": "experiment_001",
-    "date": "2026-07-02",
-    "config": "configs/small.yaml",
-    "dataset": "4 curated TIC targets",
-    "best_f1": null,
-    "status": "completed",
-    "notes": "Smoke test run"
-  }
-]
-```
-
-## Adding an Experiment
-
-Training scripts automatically create experiment directories. To manually log:
-
-1. Copy config to `experiment_NNN/config.yaml`
-2. Save metrics to `experiment_NNN/metrics.json`
-3. Update `index.json`
+*Note: All experiments enforce the Benchmark Gate. Any row with a `Status` of "✅ Complete" is guaranteed to have passed the dataset audit and is reproducible via its listed Git Commit.*

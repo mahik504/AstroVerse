@@ -63,12 +63,20 @@ def process_lightcurve(lc):
     lc = lc.remove_nans()
     
     time = lc.time.value
-    flux = lc.pdcsap_flux.value
     
-  
+    if hasattr(lc, 'pdcsap_flux') and not np.isnan(lc.pdcsap_flux.value).all():
+        flux = lc.pdcsap_flux.value
+    elif hasattr(lc, 'sap_flux') and not np.isnan(lc.sap_flux.value).all():
+        flux = lc.sap_flux.value
+    else:
+        flux = lc.flux.value
+        
     valid = ~np.isnan(flux)
     time = time[valid]
     flux = flux[valid]
+    
+    if len(flux) == 0:
+        raise ValueError("Lightcurve contains only NaNs")
 
     flux_norm = normalize_flux(flux)
     

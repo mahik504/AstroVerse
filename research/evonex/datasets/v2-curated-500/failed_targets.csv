@@ -1,0 +1,13 @@
+tic_id,pipeline_attempted,reason,exception,download_time
+159492160,Unknown,Exception,Lightcurve contains only NaNs,0.0
+382601955,ALL,No TESS observations,None,3.245206117630005
+371077708,ALL,No TESS observations,None,3.0362606048583984
+278385208,ALL,No TESS observations,None,3.042100191116333
+167512216,ALL,No TESS observations,None,4.045830488204956
+238053644,ALL,No TESS observations,None,3.2613813877105713
+159492160,Unknown,Exception,Lightcurve contains only NaNs,0.0
+382601955,ALL,No TESS observations,None,10.549557209014893
+371077708,ALL,No TESS observations,None,4.097631931304932
+278385208,ALL,No TESS observations,None,8.311635255813599
+167512216,ALL,No TESS observations,None,4.4861741065979
+238053644,ALL,No TESS observations,None,4.0367271900177

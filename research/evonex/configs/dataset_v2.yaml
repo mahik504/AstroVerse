@@ -1,0 +1,21 @@
+dataset:
+  name: "v2-curated-500"
+  random_seed: 42
+  
+  # Target distribution
+  positives: 250
+  false_positives: 250
+  variable_stars: 0
+  non_variable: 0
+  
+  # Constraints
+  sectors: 
+    - "all"
+  cadence: "2min"
+  quality: "strict"
+  
+  # Paths
+  labels_raw: "../datasets/v2-curated-500/labels_raw.csv"
+  metadata_merged: "../datasets/v2-curated-500/metadata_merged.csv"
+  hdf5_cache: "../datasets/v2-curated-500/tess_cache.h5"
+  manifest: "../datasets/v2-curated-500/dataset_manifest.json"

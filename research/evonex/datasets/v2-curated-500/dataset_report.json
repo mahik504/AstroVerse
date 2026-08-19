@@ -1,0 +1,19 @@
+{
+    "dataset_version": "v2-curated-500",
+    "generation_time_seconds": 38.083210945129395,
+    "total_requested": 12,
+    "total_successful": 6,
+    "total_failed": 6,
+    "success_rate": 0.5,
+    "pipeline_distribution": {
+        "SPOC": 6,
+        "TESS-SPOC": 0,
+        "QLP": 0,
+        "TGLC": 0,
+        "ELEANOR": 0,
+        "OTHER": 0
+    },
+    "positives": 5,
+    "negatives": 1,
+    "random_seed": 42
+}

@@ -29,6 +29,6 @@ The model is evaluated based on precision-critical metrics due to the high class
 - **ECE (Expected Calibration Error):** Pending Large-Scale Run
 
 ## Computational Requirements
-- **Inference Time:** ~2.4 ms per target (CPU)
-- **FLOPs:** 11.2M
+- **Inference Time:** Pending Evaluation
+- **FLOPs:** Pending Evaluation
 - **Hardware:** Can be trained natively on a standard GPU (NVIDIA T4 or higher) or CPU due to its lightweight parameter footprint.

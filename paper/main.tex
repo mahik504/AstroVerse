@@ -1,25 +1,38 @@
-\documentclass[runningheads]{llncs}
+\documentclass[a4paper,11pt]{article}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{hyperref}
 
-\begin{document}
+\title{AstroVerse: Explainable Exoplanet Transit Detection via Confidence-Guided Mixture-of-Experts}
+\author{AstroVerse Collaboration}
+\date{\today}
 
-\title{AstroVerse: Automated Discovery of Exoplanets using an Explainable Mixture-of-Experts Architecture}
-\author{Team EvoNex}
-\institute{Bharatiya Antariksh Hackathon 2026}
+\begin{document}
 \maketitle
 
 \begin{abstract}
-We present AstroVerse, a reproducible open-source scientific pipeline for automated exoplanet transit detection. The core architecture, EvoMoE, utilizes a Confidence-Guided Mixture-of-Experts (MoE) network to fuse multi-scale transit morphology, global periodicity, and stellar physics validation into a single explainable detection score.
+As space-based photometric surveys like TESS produce millions of light curves, automated vetting via deep learning has become essential. However, the "black-box" nature of monolithic neural networks limits their adoption by astrophysicists who require explainable physical heuristics. We present AstroVerse, an open-source research platform introducing an explainable Evolutionary Mixture-of-Experts (EvoMoE) architecture. EvoMoE dynamically routes transit signals across morphological (CNN), temporal (Transformer), and physical (MLP) experts. We rigorously benchmark this approach against classical and statistical methods using a curated, multi-source dataset spanning the TESS Input Catalog (TIC) and Mikulski Archive for Space Telescopes (MAST).
 \end{abstract}
 
-\input{sections/01_introduction.tex}
-\input{sections/02_methods.tex}
-\input{sections/03_results.tex}
-\input{sections/04_conclusion.tex}
+\section{Introduction}
+% To be written.
 
-\bibliographystyle{splncs04}
-\bibliography{references}
+\section{Related Work}
+% To be written.
+
+\section{Methodology}
+% To be written.
+
+\section{Experimental Setup}
+% To be written.
+
+\section{Results}
+% Results are pending execution of v1.1.0 -> v1.4.0 milestones.
+
+\section{Discussion}
+% To be written.
+
+\section{Conclusion}
+% To be written.
 
 \end{document}

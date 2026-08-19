@@ -8,6 +8,13 @@ The AstroVerse Curated TOI dataset is a high-quality, pre-processed collection o
 - **Primary Feature:** `lc_flux` (Phase-folded light curve, 2000 sequence length)
 - **Secondary Feature:** `tic_metadata` (12 physical stellar parameters)
 
+## Preprocessing Details
+- **Pipeline Aggregation**: Data is fetched via MAST. We prioritize high-quality SPOC and TESS-SPOC pipelines but fall back to QLP, TGLC, and ELEANOR to preserve dataset size and avoid systemic biases. The exact distribution of pipelines is logged in `dataset_report.json` for each generated subset.
+- **Detrending**: Savitzky-Golay filter applied to remove long-term stellar variability.
+- **Normalization**: Flux normalized by median flux.
+- **Phase-folding**: BLS (Box Least Squares) applied to fold transit signals.
+- **Interpolation**: Linear interpolation to standardize sequence length to $L=2000$.
+
 ## Dataset Versions
 1. `v1-curated-100`: A small, 100-target dataset intended for continuous integration testing, architecture validation, and hyperparameter sweep sanity checks.
 2. `v2-curated-500`: A medium-scale 500-target dataset for local model training.
