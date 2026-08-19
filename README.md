@@ -28,25 +28,18 @@ Open-source exoplanet transit detection pipeline: explainable Mixture-of-Experts
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
+
+Those `make` names have to exist in the `Makefile`. Today they do:
 
 ```bash
 git clone https://github.com/mahik504/AstroVerse.git
 cd AstroVerse
-
-# 1. Pipeline Validation
-make validate-pipeline
-
-# 2. Dataset Generation (Local Cache)
-make build-dataset VERSION=v2-curated-500
-
-# 3. Scientific Benchmark (Requires Benchmark Gate to pass)
-make benchmark
-
-# 4. Launch the API and Next.js Dashboard
-make dashboard
+make test        # research + API pytest
+make dashboard   # FastAPI :8000 and Next.js :3000
 ```
-Open [http://localhost:3000](http://localhost:3000) to view the detection mission control.
+
+Demo light curves are in `demo/`. Dataset `v2-curated-500` is still generating (6 of 500 targets saved on the last honest run). There is no `make benchmark` target yet, and there is no live hosted URL.
 
 ---
 
