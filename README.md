@@ -4,33 +4,27 @@
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Open-source exoplanet transit detection pipeline: explainable Mixture-of-Experts (EvoMoE) model, FastAPI inference, AstroLens Next.js dashboard. Built for BAH 2026. Benchmark numbers ship only after the dataset gate passes — see `docs/DECISION_LOG.md`.
+Open-source exoplanet transit detection pipeline: explainable Mixture-of-Experts (EvoMoE), FastAPI inference, AstroLens Next.js dashboard. Built for BAH 2026.
 
-## Current Research Status: v1.0.0-beta
+Benchmark numbers ship only after the dataset gate passes — see `docs/DECISION_LOG.md`. There is no live hosted URL and no published accuracy claim.
 
-- **Engineering Phase:** Complete (v1.0.0-beta)
-- **Pipeline Validation:** Complete
-- **Dataset Construction:** In Progress
-- **Baseline Benchmarking:** Pending
-- **Large-scale Evaluation:** Pending
+## Status (v1.0.0-beta)
 
-> **Note on Scientific Integrity:** This repository intentionally avoids publishing unsupported empirical metrics. Results will be released only after experiments have been completed, verified across multiple seeds, and fully reproduced. See `docs/DECISION_LOG.md` for our research methodology.
+| Track | State |
+| --- | --- |
+| Engineering | Complete (v1.0.0-beta) |
+| Pipeline validation | Complete |
+| Dataset `v2-curated-500` | In progress (6 of 500 targets on the last honest run) |
+| Baseline benchmarking | Pending |
+| Large-scale evaluation | Pending (`v4-paper-10000`) |
 
----
+Implemented today: AstroLens UI, FastAPI inference, EvoMoE PyTorch model, MAST ingestion, Box Least Squares phase-folding. See [ROADMAP.md](docs/ROADMAP.md).
 
-### Architecture
+## Architecture
+
 ![AstroVerse Architecture](docs/architecture.svg)
 
----
-
-### AstroLens UI Demo
-*[Placeholder: Animated GIF of AstroLens UI processing a NASA TESS Target]*
-
----
-
-## Quick Start
-
-Those `make` names have to exist in the `Makefile`. Today they do:
+## Quick start
 
 ```bash
 git clone https://github.com/mahik504/AstroVerse.git
@@ -39,55 +33,35 @@ make test        # research + API pytest
 make dashboard   # FastAPI :8000 and Next.js :3000
 ```
 
-Demo light curves are in `demo/`. Dataset `v2-curated-500` is still generating (6 of 500 targets saved on the last honest run). There is no `make benchmark` target yet, and there is no live hosted URL.
+Demo light curves are in `demo/`. There is no `make benchmark` target yet.
 
----
-
-## 🔬 Current Research Status (v1.0.0-research)
-
-AstroVerse is currently in the **Research Execution Phase**. The software engineering feature-freeze is active while we execute empirical benchmarking.
-
-* **Implemented:** Full AstroLens Next.js UI, FastAPI inference engine, EvoMoE PyTorch model, MAST automated ingestion, Box Least Squares phase-folding.
-* **Currently Executing:** Evaluating EvoMoE against classical baselines on the `v2-curated-500` dataset.
-* **Future Work:** Scaling to `v4-paper-10000` (10,000 targets) and arXiv publication.
-
-See our [ROADMAP.md](docs/ROADMAP.md) for detailed progress.
-
----
-
-## 📊 Empirical Benchmarks
-*(AstroVerse is currently in the empirical benchmarking phase. Baseline evaluations against Classical BLS, 1D CNN, ResNet, and Transformers on the `v2-curated-500` dataset are actively running. Real metrics will be published here upon completion. EvoMoE full results will follow the `v4-paper-10000` distributed training run.)*
-
----
-
-## 📂 Repository Structure
+## Repository
 
 ```text
 AstroVerse/
-├── apps/astrolens-web/     # Next.js 16 UI (Mission Control Dashboard)
-├── services/evonex-api/    # FastAPI Inference Engine
-├── research/evonex/        # PyTorch Model, Training, and Evaluation Pipeline
-├── paper/                  # LaTeX Academic Manuscript
-└── docs/                   # Scientific Documentation & Reproducibility Guides
+├── apps/astrolens-web/     # Next.js UI (Mission Control)
+├── services/evonex-api/    # FastAPI inference
+├── research/evonex/        # PyTorch model, training, evaluation
+├── paper/                  # LaTeX manuscript
+└── docs/                   # methodology and reproducibility
 ```
 
-For onboarding, please read the [Project Overview](docs/PROJECT_OVERVIEW.md).
+Onboarding: [Project Overview](docs/PROJECT_OVERVIEW.md).
 
----
+## Documentation
 
-## 📚 Documentation
-For a deep dive into the scientific and engineering principles of AstroVerse:
-- **[Project Overview](docs/PROJECT_OVERVIEW.md)** — Onboarding guide and file-by-file breakdown.
-- **[Architecture](docs/ARCHITECTURE.md)** — EvoMoE math, expert routing, and data flow.
-- **[API Reference](docs/API.md)** — FastAPI endpoints and usage.
-- **[Reproducibility](docs/REPRODUCIBILITY.md)** — How to recreate our experiments.
-- **[Model Card](docs/MODEL_CARD.md)** / **[Dataset Card](docs/DATASET_CARD.md)** — Details on EvoMoE and the dataset bias.
+- [Project Overview](docs/PROJECT_OVERVIEW.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [API Reference](docs/API.md)
+- [Reproducibility](docs/REPRODUCIBILITY.md)
+- [Model Card](docs/MODEL_CARD.md) / [Dataset Card](docs/DATASET_CARD.md)
 
-## 🤝 Contributing
-We welcome contributions! Please see [CONTRIBUTING.md](docs/CONTRIBUTING.md) for our code style (ruff, ESLint), PR templates, and testing requirements.
+## Contributing
 
-## 📝 Citation
-If you use AstroVerse or EvoMoE in your research, please cite:
+[CONTRIBUTING.md](docs/CONTRIBUTING.md) — ruff, ESLint, PR templates, tests.
+
+## Citation
+
 ```bibtex
 @software{AstroVerse2026,
   author = {Mahi K},
