@@ -1,0 +1,631 @@
+{
+  "platform": {
+    "system": "Windows-11-10.0.26300-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "python": "3.14.4",
+    "torch": "2.12.1+cpu"
+  },
+  "model": {
+    "seed": 42,
+    "total_parameters": 1485605,
+    "trainable_parameters": 1485605,
+    "breakdown": {
+      "Multi-scale CNN": 1040321,
+      "Temporal Transformer": 427617,
+      "Physics MLP": 9281,
+      "Shared classifier": 8386
+    },
+    "logit_shape": [
+      1,
+      2
+    ],
+    "weight_shape": [
+      1,
+      3
+    ],
+    "weight_sum": 0.9999998807907104,
+    "latency_ms": {
+      "n": 100,
+      "batch": 1,
+      "device": "cpu",
+      "median": 7.642900000064401,
+      "p05": 6.665395003074082,
+      "p95": 10.363330002655857,
+      "mean": 7.956881999562029
+    }
+  },
+  "library_meta": {
+    "n_catalog": 18,
+    "category_counts": {
+      "CONFIRMED_PLANET": 11,
+      "FALSE_POSITIVE": 5,
+      "BORDERLINE_CANDIDATE": 2
+    },
+    "data_mode_counts": {
+      "REAL_REFERENCE": 3,
+      "SYNTHETIC_MODEL": 15
+    },
+    "n_targets_json": 79,
+    "target_status_counts": {
+      "UNCLASSIFIED": 70,
+      "CONFIRMED_PLANET": 8,
+      "ECLIPSING_BINARY": 1
+    },
+    "labels_rows": 5,
+    "labels_ids": [
+      "261136679",
+      "261136246",
+      "38846515",
+      "123456789",
+      "987654321"
+    ],
+    "labels_classes": [
+      "Confirmed Planet",
+      "Planet Candidate",
+      "False Positive",
+      "Confirmed Planet",
+      "False Positive"
+    ],
+    "dataset_state": {
+      "processed_tics": [
+        "281541555",
+        "231663901",
+        "261136679",
+        "149010208",
+        "25155310",
+        "307210830"
+      ],
+      "pipeline_dist": {
+        "SPOC": 6,
+        "TESS-SPOC": 0,
+        "QLP": 0,
+        "TGLC": 0,
+        "ELEANOR": 0,
+        "OTHER": 0
+      },
+      "success_pos": 5,
+      "success_neg": 1
+    },
+    "h5_files": [
+      "research\\evonex\\venv\\Lib\\site-packages\\h5py\\tests\\data_files\\compound-dtype-complex.h5",
+      "research\\evonex\\venv\\Lib\\site-packages\\h5py\\tests\\data_files\\vlen_string_dset.h5",
+      "research\\evonex\\venv\\Lib\\site-packages\\h5py\\tests\\data_files\\vlen_string_dset_utc.h5",
+      "research\\evonex\\venv\\Lib\\site-packages\\h5py\\tests\\data_files\\vlen_string_s390x.h5",
+      "research\\evonex\\datasets\\v1-curated-100\\tess_cache.h5",
+      "research\\evonex\\datasets\\v2-curated-500\\tess_cache.h5",
+      "research\\evonex\\data\\cache\\tess_cache.h5",
+      "research\\datasets\\v2-curated-500\\tess_cache_raw.h5"
+    ],
+    "weight_files": [
+      "research\\evonex\\weights\\evomoe_weights_corrupted.pth.bak"
+    ],
+    "trained_weights_present": false
+  },
+  "curves": [
+    {
+      "id": "Kepler-10b",
+      "name": "Kepler-10b (Rocky Super-Earth)",
+      "file": "Kepler-10b.csv",
+      "category": "CONFIRMED_PLANET",
+      "data_mode": "REAL_REFERENCE",
+      "period_days": 0.84,
+      "catalog_depth_ppm": 152,
+      "catalog_snr": 28.4,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": 0.0,
+      "x_max": 27.0,
+      "measured_depth_ppm": 259.2495759005109,
+      "flux_median": 0.9999952999674281,
+      "depth_ratio": 1.70558931513494
+    },
+    {
+      "id": "WASP-126b",
+      "name": "WASP-126b (Inflated Hot Jupiter)",
+      "file": "WASP-126b.csv",
+      "category": "CONFIRMED_PLANET",
+      "data_mode": "REAL_REFERENCE",
+      "period_days": 3.28,
+      "catalog_depth_ppm": 9200,
+      "catalog_snr": 45.2,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": 0.0,
+      "x_max": 27.0,
+      "measured_depth_ppm": 19577.86702199238,
+      "flux_median": 0.9998774838508776,
+      "depth_ratio": 2.1280290241296065
+    },
+    {
+      "id": "FalsePositive-EB",
+      "name": "TIC-281541555 (Contact Eclipsing Binary)",
+      "file": "FalsePositive-EB.csv",
+      "category": "FALSE_POSITIVE",
+      "data_mode": "REAL_REFERENCE",
+      "period_days": 1.12,
+      "catalog_depth_ppm": 45000,
+      "catalog_snr": 82.0,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": 0.0,
+      "x_max": 27.0,
+      "measured_depth_ppm": 52438.08659420745,
+      "flux_median": 0.9998411556652649,
+      "depth_ratio": 1.16529081320461
+    },
+    {
+      "id": "TOI-700d",
+      "name": "TOI-700 d (Habitable-Zone Earth)",
+      "file": "TOI-700d.csv",
+      "category": "CONFIRMED_PLANET",
+      "data_mode": "SYNTHETIC_MODEL",
+      "period_days": 37.42,
+      "catalog_depth_ppm": 850,
+      "catalog_snr": 14.1,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": -0.5,
+      "x_max": 0.5,
+      "measured_depth_ppm": 1586.4015569816424,
+      "flux_median": 1.0,
+      "depth_ratio": 1.8663547729195793
+    },
+    {
+      "id": "TRAPPIST-1e",
+      "name": "TRAPPIST-1 e (Resonant Chain Terrestrial)",
+      "file": "TRAPPIST-1e.csv",
+      "category": "CONFIRMED_PLANET",
+      "data_mode": "SYNTHETIC_MODEL",
+      "period_days": 6.1,
+      "catalog_depth_ppm": 550,
+      "catalog_snr": 22.6,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": -0.5,
+      "x_max": 0.5,
+      "measured_depth_ppm": 1501.6301168747636,
+      "flux_median": 1.0,
+      "depth_ratio": 2.7302365761359337
+    },
+    {
+      "id": "HD-209458b",
+      "name": "HD 209458 b (Osiris - Canonical Hot Jupiter)",
+      "file": "HD-209458b.csv",
+      "category": "CONFIRMED_PLANET",
+      "data_mode": "SYNTHETIC_MODEL",
+      "period_days": 3.52,
+      "catalog_depth_ppm": 14600,
+      "catalog_snr": 62.0,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": -0.5,
+      "x_max": 0.5,
+      "measured_depth_ppm": 15246.108214153954,
+      "flux_median": 1.0,
+      "depth_ratio": 1.0442539872708188
+    },
+    {
+      "id": "LHS-3844b",
+      "name": "LHS 3844 b (Ultra-Short-Period Lava World)",
+      "file": "LHS-3844b.csv",
+      "category": "CONFIRMED_PLANET",
+      "data_mode": "SYNTHETIC_MODEL",
+      "period_days": 0.46,
+      "catalog_depth_ppm": 410,
+      "catalog_snr": 19.8,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": -0.5,
+      "x_max": 0.5,
+      "measured_depth_ppm": 1314.770900512019,
+      "flux_median": 1.0,
+      "depth_ratio": 3.2067582939317534
+    },
+    {
+      "id": "K2-18b",
+      "name": "K2-18 b (Atmospheric Sub-Neptune)",
+      "file": "K2-18b.csv",
+      "category": "CONFIRMED_PLANET",
+      "data_mode": "SYNTHETIC_MODEL",
+      "period_days": 32.94,
+      "catalog_depth_ppm": 2980,
+      "catalog_snr": 31.5,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": -0.5,
+      "x_max": 0.5,
+      "measured_depth_ppm": 3664.3604632276006,
+      "flux_median": 1.0,
+      "depth_ratio": 1.2296511621569128
+    },
+    {
+      "id": "FP-Grazing-Binary-01",
+      "name": "FP-GB-8921 (Grazing Eclipsing Binary)",
+      "file": "FP-Grazing-Binary-01.csv",
+      "category": "FALSE_POSITIVE",
+      "data_mode": "SYNTHETIC_MODEL",
+      "period_days": 2.45,
+      "catalog_depth_ppm": 22000,
+      "catalog_snr": 54.0,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": -0.5,
+      "x_max": 0.5,
+      "measured_depth_ppm": 22210.612206656875,
+      "flux_median": 0.9999999999999999,
+      "depth_ratio": 1.009573282120767
+    },
+    {
+      "id": "FP-Stellar-Flare-Noise",
+      "name": "FP-FLARE-1044 (Active Star Flare Anomaly)",
+      "file": "FP-Stellar-Flare-Noise.csv",
+      "category": "FALSE_POSITIVE",
+      "data_mode": "SYNTHETIC_MODEL",
+      "period_days": 0.0,
+      "catalog_depth_ppm": 4800,
+      "catalog_snr": 8.1,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": -0.5,
+      "x_max": 0.5,
+      "measured_depth_ppm": 6076.656772687983,
+      "flux_median": 1.0,
+      "depth_ratio": 1.2659701609766632
+    },
+    {
+      "id": "FP-Background-Blended-EB",
+      "name": "FP-BEB-4190 (Background Blended Binary)",
+      "file": "FP-Background-Blended-EB.csv",
+      "category": "FALSE_POSITIVE",
+      "data_mode": "SYNTHETIC_MODEL",
+      "period_days": 4.18,
+      "catalog_depth_ppm": 1200,
+      "catalog_snr": 11.2,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": -0.5,
+      "x_max": 0.5,
+      "measured_depth_ppm": 1683.8872448036168,
+      "flux_median": 1.0,
+      "depth_ratio": 1.4032393706696806
+    },
+    {
+      "id": "Borderline-Candidate-01",
+      "name": "CAND-7801 (Borderline Detection Threshold)",
+      "file": "Borderline-Candidate-01.csv",
+      "category": "BORDERLINE_CANDIDATE",
+      "data_mode": "SYNTHETIC_MODEL",
+      "period_days": 8.75,
+      "catalog_depth_ppm": 135,
+      "catalog_snr": 7.4,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": -0.5,
+      "x_max": 0.5,
+      "measured_depth_ppm": 2598.527615314983,
+      "flux_median": 1.0000000000000002,
+      "depth_ratio": 19.24835270603691
+    },
+    {
+      "id": "Borderline-Candidate-02",
+      "name": "CAND-9102 (Low SNR Ambiguous Signal)",
+      "file": "Borderline-Candidate-02.csv",
+      "category": "BORDERLINE_CANDIDATE",
+      "data_mode": "SYNTHETIC_MODEL",
+      "period_days": 12.3,
+      "catalog_depth_ppm": 110,
+      "catalog_snr": 6.8,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": -0.5,
+      "x_max": 0.5,
+      "measured_depth_ppm": 1417.1469133800185,
+      "flux_median": 1.0,
+      "depth_ratio": 12.883153758000168
+    },
+    {
+      "id": "Ultra-Short-Period-Hot-Jupiter",
+      "name": "USP-HJ-005 (Ultra-Short-Period Giant)",
+      "file": "Ultra-Short-Period-Hot-Jupiter.csv",
+      "category": "CONFIRMED_PLANET",
+      "data_mode": "SYNTHETIC_MODEL",
+      "period_days": 0.72,
+      "catalog_depth_ppm": 12500,
+      "catalog_snr": 51.0,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": -0.5,
+      "x_max": 0.5,
+      "measured_depth_ppm": 13308.222342529152,
+      "flux_median": 1.0,
+      "depth_ratio": 1.0646577874023322
+    },
+    {
+      "id": "Noisy-M-Dwarf-Transit",
+      "name": "M-DWARF-884 (Noisy M-Dwarf Super-Earth)",
+      "file": "Noisy-M-Dwarf-Transit.csv",
+      "category": "CONFIRMED_PLANET",
+      "data_mode": "SYNTHETIC_MODEL",
+      "period_days": 2.15,
+      "catalog_depth_ppm": 980,
+      "catalog_snr": 16.5,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": -0.5,
+      "x_max": 0.5,
+      "measured_depth_ppm": 1694.9978895119955,
+      "flux_median": 1.0000000000000002,
+      "depth_ratio": 1.7295896831755055
+    },
+    {
+      "id": "Giant-Star-Deep-False-Alarm",
+      "name": "FP-GIANT-602 (Evolved Giant False Alarm)",
+      "file": "Giant-Star-Deep-False-Alarm.csv",
+      "category": "FALSE_POSITIVE",
+      "data_mode": "SYNTHETIC_MODEL",
+      "period_days": 18.5,
+      "catalog_depth_ppm": 8500,
+      "catalog_snr": 28.0,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": -0.5,
+      "x_max": 0.5,
+      "measured_depth_ppm": 9053.428359182992,
+      "flux_median": 1.0,
+      "depth_ratio": 1.0651092187274107
+    },
+    {
+      "id": "Eccentric-Transit-Candidate",
+      "name": "ECC-741 (High-Eccentricity Candidate)",
+      "file": "Eccentric-Transit-Candidate.csv",
+      "category": "CONFIRMED_PLANET",
+      "data_mode": "SYNTHETIC_MODEL",
+      "period_days": 26.4,
+      "catalog_depth_ppm": 2100,
+      "catalog_snr": 24.0,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": -0.5,
+      "x_max": 0.5,
+      "measured_depth_ppm": 2755.01752032159,
+      "flux_median": 1.0,
+      "depth_ratio": 1.3119131049150428
+    },
+    {
+      "id": "Multi-Planet-Overlap-Sim",
+      "name": "MULTI-SYS-303 (Overlapping Multi-Planet System)",
+      "file": "Multi-Planet-Overlap-Sim.csv",
+      "category": "CONFIRMED_PLANET",
+      "data_mode": "SYNTHETIC_MODEL",
+      "period_days": 5.8,
+      "catalog_depth_ppm": 1600,
+      "catalog_snr": 35.0,
+      "n": 2000,
+      "columns": [
+        "time",
+        "flux"
+      ],
+      "x_min": -0.5,
+      "x_max": 0.5,
+      "measured_depth_ppm": 2473.6287743444273,
+      "flux_median": 1.0,
+      "depth_ratio": 1.546017983965267
+    }
+  ],
+  "untrained_forward": [
+    {
+      "id": "Kepler-10b",
+      "prob_class1": 0.5081892609596252,
+      "w_cnn": 0.3253345191478729,
+      "w_transformer": 0.38286852836608887,
+      "w_physics": 0.2917969822883606,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    },
+    {
+      "id": "WASP-126b",
+      "prob_class1": 0.5081862211227417,
+      "w_cnn": 0.3253699839115143,
+      "w_transformer": 0.3827574849128723,
+      "w_physics": 0.2918725311756134,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    },
+    {
+      "id": "FalsePositive-EB",
+      "prob_class1": 0.5080569386482239,
+      "w_cnn": 0.32519111037254333,
+      "w_transformer": 0.3830007016658783,
+      "w_physics": 0.291808158159256,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    },
+    {
+      "id": "TOI-700d",
+      "prob_class1": 0.5081839561462402,
+      "w_cnn": 0.3253445625305176,
+      "w_transformer": 0.38284945487976074,
+      "w_physics": 0.2918059825897217,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    },
+    {
+      "id": "TRAPPIST-1e",
+      "prob_class1": 0.508188784122467,
+      "w_cnn": 0.32533562183380127,
+      "w_transformer": 0.3828688859939575,
+      "w_physics": 0.2917955219745636,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    },
+    {
+      "id": "HD-209458b",
+      "prob_class1": 0.5081949830055237,
+      "w_cnn": 0.32539039850234985,
+      "w_transformer": 0.38277488946914673,
+      "w_physics": 0.2918347716331482,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    },
+    {
+      "id": "LHS-3844b",
+      "prob_class1": 0.5081911683082581,
+      "w_cnn": 0.3253333568572998,
+      "w_transformer": 0.3828715980052948,
+      "w_physics": 0.2917949855327606,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    },
+    {
+      "id": "K2-18b",
+      "prob_class1": 0.508188784122467,
+      "w_cnn": 0.3253490924835205,
+      "w_transformer": 0.3828446567058563,
+      "w_physics": 0.29180625081062317,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    },
+    {
+      "id": "FP-Grazing-Binary-01",
+      "prob_class1": 0.5082074999809265,
+      "w_cnn": 0.3254299461841583,
+      "w_transformer": 0.3827109932899475,
+      "w_physics": 0.2918590307235718,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    },
+    {
+      "id": "FP-Stellar-Flare-Noise",
+      "prob_class1": 0.5081855654716492,
+      "w_cnn": 0.3253577947616577,
+      "w_transformer": 0.38283345103263855,
+      "w_physics": 0.29180875420570374,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    },
+    {
+      "id": "FP-Background-Blended-EB",
+      "prob_class1": 0.5081881284713745,
+      "w_cnn": 0.32533976435661316,
+      "w_transformer": 0.38286206126213074,
+      "w_physics": 0.2917981445789337,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    },
+    {
+      "id": "Borderline-Candidate-01",
+      "prob_class1": 0.5081860423088074,
+      "w_cnn": 0.32532963156700134,
+      "w_transformer": 0.3828766942024231,
+      "w_physics": 0.29179370403289795,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    },
+    {
+      "id": "Borderline-Candidate-02",
+      "prob_class1": 0.5081896185874939,
+      "w_cnn": 0.32532647252082825,
+      "w_transformer": 0.38288214802742004,
+      "w_physics": 0.2917914092540741,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    },
+    {
+      "id": "Ultra-Short-Period-Hot-Jupiter",
+      "prob_class1": 0.5081945061683655,
+      "w_cnn": 0.3253886103630066,
+      "w_transformer": 0.382777601480484,
+      "w_physics": 0.2918337285518646,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    },
+    {
+      "id": "Noisy-M-Dwarf-Transit",
+      "prob_class1": 0.5081904530525208,
+      "w_cnn": 0.32533782720565796,
+      "w_transformer": 0.38286134600639343,
+      "w_physics": 0.2918007969856262,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    },
+    {
+      "id": "Giant-Star-Deep-False-Alarm",
+      "prob_class1": 0.5081902742385864,
+      "w_cnn": 0.3253633677959442,
+      "w_transformer": 0.38281992077827454,
+      "w_physics": 0.29181674122810364,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    },
+    {
+      "id": "Eccentric-Transit-Candidate",
+      "prob_class1": 0.5081928372383118,
+      "w_cnn": 0.3253420889377594,
+      "w_transformer": 0.38285648822784424,
+      "w_physics": 0.29180145263671875,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    },
+    {
+      "id": "Multi-Planet-Overlap-Sim",
+      "prob_class1": 0.5081916451454163,
+      "w_cnn": 0.32534709572792053,
+      "w_transformer": 0.38284847140312195,
+      "w_physics": 0.2918044924736023,
+      "tic_input": "zeros",
+      "note": "Random initialization, seed 42. Not a trained detection."
+    }
+  ]
+}

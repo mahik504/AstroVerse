@@ -4,6 +4,13 @@ All notable changes to the AstroVerse project are documented here.
 
 ---
 
+## v1.1.0 — October 2026
+
+- AstroLens reference library of 18 light curves, with the FastAPI routes that serve it
+- SCIE manuscript, measured depths, and the architecture figures that match `model_evonex.py`
+- Removed the history-rewrite script, placeholder performance plots, and the corrupted weight backup
+- CPU latency for one forward pass recorded at a median of 7.64 ms
+
 ## v1.0.0-beta — July 2026
 
 **Research-grade transformation.**

@@ -1,11 +1,19 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
-  - family-names: "K"
-    given-names: "Mahi"
-title: "AstroVerse: Adaptive Mixture-of-Experts for Exoplanet Detection"
-version: 1.0.0
-date-released: 2026-07-02
+  - family-names: "Gehlot"
+    given-names: "Mahaveer Singh"
+    email: "gehlot.mahisingh2006.102@gmail.com"
+    affiliation: "MIT World Peace University"
+  - family-names: "Srivastava"
+    given-names: "Shruti"
+    affiliation: "MIT World Peace University"
+  - family-names: "Babat"
+    given-names: "Taher"
+    affiliation: "MIT World Peace University"
+title: "AstroVerse: a mixture-of-experts architecture for photometric transit vetting"
+version: 1.1.0
+date-released: 2026-10-16
 url: "https://github.com/mahik504/AstroVerse"
 repository-code: "https://github.com/mahik504/AstroVerse"
 abstract: "AstroVerse is a reproducible, open-source scientific pipeline for automated exoplanet transit detection. It utilizes an explainable EvoMoE (Mixture-of-Experts) architecture integrating multi-scale CNNs, Transformers, and a Physics MLP to validate NASA TESS photometry against TIC stellar metadata."

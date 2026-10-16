@@ -49,72 +49,31 @@
 }
 
 :root {
-  --background: oklch(0.02 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.06 0.005 260);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.06 0.005 260);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.05 0 0);
-  --secondary: oklch(0.15 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.15 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.15 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.5rem;
-  --sidebar: oklch(0.06 0.005 260);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.15 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
-
-.dark {
-  --background: oklch(0.02 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.06 0.005 260);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.06 0.005 260);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.05 0 0);
-  --secondary: oklch(0.15 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.15 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.15 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.06 0.005 260);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.15 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* Celestial Atelier Color System */
+  --background: oklch(0.965 0.012 85); /* #F7F3EA Warm porcelain canvas */
+  --foreground: #22313F;               /* Deep slate charcoal text */
+  --card: rgba(255, 254, 250, 0.92);   /* Ivory panel */
+  --card-foreground: #22313F;
+  --popover: rgba(255, 254, 250, 0.95);
+  --popover-foreground: #22313F;
+  --primary: #187D83;                  /* Celestial Deep Teal */
+  --primary-foreground: #FFFFFF;
+  --secondary: #EEF4F5;                /* Soft mist */
+  --secondary-foreground: #22313F;
+  --muted: #EEF4F5;
+  --muted-foreground: #5A6E7F;          /* Slate secondary text */
+  --accent: #E2F2F5;
+  --accent-foreground: #187D83;
+  --destructive: #D94848;
+  --border: rgba(24, 125, 131, 0.16);
+  --input: rgba(24, 125, 131, 0.22);
+  --ring: #187D83;
+  --chart-1: #187D83;                  /* Teal (CNN Morphology) */
+  --chart-2: #8174C7;                  /* Violet (Transformer Rhythm) */
+  --chart-3: #8B624A;                  /* Coffee/Terracotta (Physics MLP) */
+  --chart-4: #0284C7;                  /* Sky Blue */
+  --chart-5: #10B981;                  /* Emerald Confirmation */
+  --radius: 0.75rem;
 }
 
 @layer base {
@@ -122,9 +81,37 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: #F7F3EA;
+    color: #22313F;
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   }
   html {
     @apply font-sans;
   }
+}
+
+/* Celestial Atelier Custom UI Elements */
+.cockpit-panel {
+  background: rgba(255, 254, 250, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(24, 125, 131, 0.16);
+  box-shadow: 0 10px 30px -5px rgba(24, 125, 131, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+}
+
+.cockpit-panel-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cockpit-panel-hover:hover {
+  border-color: rgba(24, 125, 131, 0.35);
+  box-shadow: 0 14px 36px -4px rgba(24, 125, 131, 0.14), 0 6px 16px -2px rgba(0, 0, 0, 0.04);
+}
+
+.atelier-card-inset {
+  background: rgba(238, 244, 245, 0.75);
+  border: 1px solid rgba(24, 125, 131, 0.12);
+}
+
+.teal-glow {
+  box-shadow: 0 0 20px rgba(24, 125, 131, 0.22);
 }

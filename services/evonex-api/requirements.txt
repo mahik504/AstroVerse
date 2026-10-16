@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+torch
+pandas
+numpy
+openpyxl
+python-multipart
+pydantic

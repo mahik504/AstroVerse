@@ -10,7 +10,7 @@ AstroVerse bridges this gap by introducing **EvoMoE**, a Confidence-Guided Mixtu
 ## The Architecture
 The AstroVerse platform consists of three pillars:
 1. **The Research Pipeline (`research/evonex/`)**: A PyTorch-based training and evaluation framework for building and validating EvoMoE against classical and neural baselines.
-2. **The Inference Engine (`services/evonex-api/`)**: A FastAPI backend that hosts the trained weights and provides low-latency REST endpoints for live astronomical data processing.
+2. **The Inference Engine (`services/evonex-api/`)**: A FastAPI service. `POST /predict` runs the EvoMoE forward pass and returns logits and gate weights.
 3. **The AstroLens Dashboard (`apps/astrolens-web/`)**: A Next.js 16 frontend that visualizes the light curves and expert routing contributions for human-in-the-loop validation.
 
 ## Key Design Decisions

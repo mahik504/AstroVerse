@@ -1,0 +1,164 @@
+[
+  {
+    "id": "Kepler-10b",
+    "host": "G-type Sun-like",
+    "category": "CONFIRMED_PLANET",
+    "period_days": 0.84,
+    "depth_ppm": 259.2,
+    "snr": 8.72,
+    "mode": "REAL_REFERENCE"
+  },
+  {
+    "id": "WASP-126b",
+    "host": "G2V Star",
+    "category": "CONFIRMED_PLANET",
+    "period_days": 3.28,
+    "depth_ppm": 19577.9,
+    "snr": 16.78,
+    "mode": "REAL_REFERENCE"
+  },
+  {
+    "id": "FalsePositive-EB",
+    "host": "F-type Binary",
+    "category": "FALSE_POSITIVE",
+    "period_days": 1.12,
+    "depth_ppm": 52438.1,
+    "snr": 87.66,
+    "mode": "REAL_REFERENCE"
+  },
+  {
+    "id": "TOI-700d",
+    "host": "M2V Red Dwarf",
+    "category": "CONFIRMED_PLANET",
+    "period_days": 37.42,
+    "depth_ppm": 1586.4,
+    "snr": 7.23,
+    "mode": "SYNTHETIC_MODEL"
+  },
+  {
+    "id": "TRAPPIST-1e",
+    "host": "Ultra-Cool M8V Dwarf",
+    "category": "CONFIRMED_PLANET",
+    "period_days": 6.1,
+    "depth_ppm": 1501.6,
+    "snr": 6.75,
+    "mode": "SYNTHETIC_MODEL"
+  },
+  {
+    "id": "HD-209458b",
+    "host": "G0V Star",
+    "category": "CONFIRMED_PLANET",
+    "period_days": 3.52,
+    "depth_ppm": 15246.1,
+    "snr": 72.45,
+    "mode": "SYNTHETIC_MODEL"
+  },
+  {
+    "id": "LHS-3844b",
+    "host": "M5V Dwarf",
+    "category": "CONFIRMED_PLANET",
+    "period_days": 0.46,
+    "depth_ppm": 1314.8,
+    "snr": 6.0,
+    "mode": "SYNTHETIC_MODEL"
+  },
+  {
+    "id": "K2-18b",
+    "host": "M2.5V Dwarf",
+    "category": "CONFIRMED_PLANET",
+    "period_days": 32.94,
+    "depth_ppm": 3664.4,
+    "snr": 16.65,
+    "mode": "SYNTHETIC_MODEL"
+  },
+  {
+    "id": "FP-Grazing-Binary-01",
+    "host": "A-type Dwarf",
+    "category": "FALSE_POSITIVE",
+    "period_days": 2.45,
+    "depth_ppm": 22210.6,
+    "snr": 60.94,
+    "mode": "SYNTHETIC_MODEL"
+  },
+  {
+    "id": "FP-Stellar-Flare-Noise",
+    "host": "M4Ve Flare Star",
+    "category": "FALSE_POSITIVE",
+    "period_days": 0.0,
+    "depth_ppm": 6076.7,
+    "snr": 4.87,
+    "mode": "SYNTHETIC_MODEL"
+  },
+  {
+    "id": "FP-Background-Blended-EB",
+    "host": "F8V Field Star",
+    "category": "FALSE_POSITIVE",
+    "period_days": 4.18,
+    "depth_ppm": 1683.9,
+    "snr": 7.63,
+    "mode": "SYNTHETIC_MODEL"
+  },
+  {
+    "id": "Borderline-Candidate-01",
+    "host": "K1V Star",
+    "category": "BORDERLINE_CANDIDATE",
+    "period_days": 8.75,
+    "depth_ppm": 2598.5,
+    "snr": 5.42,
+    "mode": "SYNTHETIC_MODEL"
+  },
+  {
+    "id": "Borderline-Candidate-02",
+    "host": "G5V Star",
+    "category": "BORDERLINE_CANDIDATE",
+    "period_days": 12.3,
+    "depth_ppm": 1417.1,
+    "snr": 6.49,
+    "mode": "SYNTHETIC_MODEL"
+  },
+  {
+    "id": "Ultra-Short-Period-Hot-Jupiter",
+    "host": "F7V Subgiant",
+    "category": "CONFIRMED_PLANET",
+    "period_days": 0.72,
+    "depth_ppm": 13308.2,
+    "snr": 60.65,
+    "mode": "SYNTHETIC_MODEL"
+  },
+  {
+    "id": "Noisy-M-Dwarf-Transit",
+    "host": "M3V Active Dwarf",
+    "category": "CONFIRMED_PLANET",
+    "period_days": 2.15,
+    "depth_ppm": 1695.0,
+    "snr": 7.65,
+    "mode": "SYNTHETIC_MODEL"
+  },
+  {
+    "id": "Giant-Star-Deep-False-Alarm",
+    "host": "K2III Red Giant",
+    "category": "FALSE_POSITIVE",
+    "period_days": 18.5,
+    "depth_ppm": 9053.4,
+    "snr": 43.34,
+    "mode": "SYNTHETIC_MODEL"
+  },
+  {
+    "id": "Eccentric-Transit-Candidate",
+    "host": "G1V Star",
+    "category": "CONFIRMED_PLANET",
+    "period_days": 26.4,
+    "depth_ppm": 2755.0,
+    "snr": 12.77,
+    "mode": "SYNTHETIC_MODEL"
+  },
+  {
+    "id": "Multi-Planet-Overlap-Sim",
+    "host": "K0V Star",
+    "category": "CONFIRMED_PLANET",
+    "period_days": 5.8,
+    "depth_ppm": 2473.6,
+    "snr": 7.43,
+    "mode": "SYNTHETIC_MODEL"
+  }
+]

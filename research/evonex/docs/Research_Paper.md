@@ -34,12 +34,8 @@ Training and evaluation data is sourced from the NASA TESS SPOC 2-minute cadence
 
 **Current dataset status:** Preliminary experiments used a small set of known TESS Objects of Interest. Full-scale training on the complete TOI catalog (3000+ dispositioned candidates) is planned as the next phase of this research.
 
-### 3.2 Baseline Comparison (Published Literature)
-| Architecture | F1-Score | Source |
-| :--- | :---: | :--- |
-| AstroNet (Shallue & Vanderburg, 2018) | 0.89 | AJ 155(2):94 |
-| ExoNet (Ansdell et al., 2018) | 0.90 | ApJL 869(1):L7 |
-| **EvoMoE (This Work)** | **pending** | In progress |
+### 3.2 Published vetters
+Shallue and Vanderburg (2018) and Ansdell et al. (2018) report their own operating points on their own samples. Those numbers, and the ones from ExoMiner and Astronet-Triage-v2, are collected in the manuscript under `paper/scie/`. EvoMoE's catalog comparison is the run that follows this note.
 
 ## 4. Limitations
 - **Dataset Size:** Current training set is limited. Full-scale evaluation requires training on thousands of labeled targets from the TOI catalog.
